@@ -1,0 +1,3 @@
+[submodule "upagekite"]
+	path = upagekite
+	url = https://github.com/pagekite/upagekite
