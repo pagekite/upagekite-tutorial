@@ -32,14 +32,18 @@ you prefer to DIY, the [relay itself][3] is also fully open source.
 Optionally, if you are targetting the ESP32, install [a recent (1.14+)
 version of MicroPython](https://micropython.org/download/) on your device.
 
+For Micropython on Unix:
+
+   * micropython -m upip install uasyncio
+
 
 ## Getting Started
 
-    # 1. Fork this repository on github?
+    # 1. Fork this repository on github?  (optional)
     ...
 
-    # 2. Clone the reposity for local work
-    #    Replace the URL with yoru fork, if you prefer.
+    # 2. Clone the reposity for local work.
+    #    Replace the URL with your fork, if you created one.
     #
     git clone https://github.com/upagekite/upagekite-tutorial
 
@@ -47,12 +51,17 @@ version of MicroPython](https://micropython.org/download/) on your device.
     git submodule init
     git submodule update
 
-    # 4. Add your pagekite.net credentials to `private/settings.py`
-    ...
+    # 4. Add your pagekite.net credentials to `private/secrets.json`
+    cp private/secrets.json.sample private/secrets.json
+    nano private/secrets.json
 
-    # 5. Run `hello.py` to verify it works!
-    python3 samples/hello.py
-    micropython samples/hello.py
+    # 5. Load the template app to verify it works!
+    python3 -m app
+    micropython -m app
+
+    # 6. In another terminal, try to fetch `/robots.txt`
+    curl https://YOURKITE.pagekite.me/robots.txt
+
 
 NOTE: this project template configures `git` to ignore changes made
 under `private/` - you will not be prompted to commit those changes.
@@ -60,10 +69,11 @@ This is to avoid accidentally leaking credentials to Github or other
 code sharing sites.
 
 
-## Choose your Adventure!
+## Choose Your Adventure!
 
 You are now ready to proceed to one of the available tutorials
 
+   1. [Hello world](tutorials/01_Hello.md)
 
 
 
