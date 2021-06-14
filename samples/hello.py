@@ -57,13 +57,14 @@ def web_hello_dynamic(req_env):
 # These things are added to the req_env dict passed to any dynamic URL
 # handlers, and the global environment when running .py files from
 # within the webroot.
-app_env = {'something': 'An Example'}
+shared_req_env = {'something': 'An Example'}
 
 # Create our HTTP server
-httpd = HTTPD(KITE_NAME, WEB_ROOT, app_env, myPageKiteSettings)
+httpd = HTTPD(KITE_NAME, WEB_ROOT, shared_req_env, myPageKiteSettings)
 
 # Create our kite, directing any requests to the HTTP server
 kite = Kite(KITE_NAME, KITE_SECRET, handler=httpd.handle_http_request)
 
 # Fly the kite, serve forever...
-uPageKite([kite], uPK=myPageKiteSettings).run()
+pk_control = uPageKite([kite], uPK=myPageKiteSettings)
+pk_control.run()
