@@ -1,4 +1,4 @@
-# upagekite - Tutorial and Template
+# upagekite - Tutorial and App Template
 
 
 **WARNING:** This is a work in progress! It's nowhere near complete.
@@ -41,7 +41,7 @@ RAM!
 Optionally, if you are targetting the ESP32, install [a recent (1.14+)
 version of MicroPython](https://micropython.org/download/) on your device.
 
-For Micropython on Unix, you may also need:
+For MicroPython on Unix, you may also need:
 
    * micropython -m upip install uasyncio
 
@@ -67,7 +67,7 @@ For Micropython on Unix, you may also need:
     # 5a. Run the template app to verify it works!
     python3 -m app
 
-    # 5b. Or, run the template app using MicroPython!
+    # 5b. Or, run the template app using MicroPython:
     micropython -m app
 
     # 6. In another terminal, try to fetch `/robots.txt`
@@ -82,9 +82,14 @@ code sharing sites.
 
 ## Choose Your Adventure!
 
-You are now ready to proceed to one of the available tutorials
+You are now ready to proceed to one of the available tutorials:
 
-   1. [Hello world](tutorials/01_Hello.md)
+   * [Hello World](tutorials/01_Hello_World.md) (standalone)
+
+The following tutorials all assume you are using the provided app
+template:
+
+   * [Dynamic Hello World](tutorials/02_Dynamic_Hello_World.md)
 
 
 

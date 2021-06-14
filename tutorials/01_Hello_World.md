@@ -6,13 +6,22 @@
  *starting upagekite*
 
 **Prerequisites:**
- [Install upagekite](../README.md),
- [Register a pagekite.net account](https://pagekite.net/signup/)
+ [install upagekite](../README.md),
+ [register a pagekite.net account](https://pagekite.net/signup/)
+
+**Sample code:** [samples/hello.py](../samples/hello.py)
 
 -----------------------------------------------------------------------------
 
-Once you have completed the prerequisites, building a public-facing uPageKite
-web server can be done in only a few lines of code.
+Once you have completed the prerequisites, building a public-facing
+uPageKite web server can be done in only a few lines of code.
+
+**Note:** If you are using the provided app template, most of this is
+boilerplate is already taken care of in `app/__main__.py` - you don't
+need to write this code yourself. A [stand-alone
+sample](../samples/hello.py) which mostly matches this tutorial is also
+provided. Either way, it may still be worth reading this tutorial
+anyway, to understand what is going on.
 
 
 ## 1. Prepare your app settings
@@ -147,11 +156,11 @@ something that looks a bit like this:
 
     pk_control.run()
 
-You should be able to copy/paste this into file named `hello.py`, edit
-to your liking and then run it using the Python 3 interpretor. That
-might look something like this:
+This code has already been compiled into the [hello.py](../samples/hello.py)
+sample, which you should be able to edit and then run using the Python 3
+interpretor. That might look something like this:
 
-    tutorial$ python3 hello.py
+    tutorial$ python3 samples/hello.py
     [162..490] Tick: uPageKite 0.0.1u; back_off=1; relays=0; socks=0
     [162..375] Ping ('185.112.146.199', 443) ok: 25ms (~22ms)
     ...
@@ -164,4 +173,11 @@ Once the DNS update is complete, you should be able to load
 `https://YOURKITE.pagekite.me/` in a browser and see the contents of
 `static/index.html`: Hello Static World!
 
+**Note:** If you edit `samples.py` to add your kite credentials, be sure
+not to accidentally commit those changes and push to a public
+repository! When you are done testing, run `git checkout
+samples/hello.py` to revert your changes and prevent that mistake.
+
 -----------------------------------------------------------------------------
+
+**Next:** [Dynamic Hello World](02_Dynamic_Hello_World.md)
