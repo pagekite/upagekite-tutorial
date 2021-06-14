@@ -1,15 +1,19 @@
 # upagekite - Tutorial and Template
 
+
+**WARNING:** This is a work in progress! It's nowhere near complete.
+
+
 ## Introduction
 
 This is a tutorial and application template for people getting started
-building webapps using [upagekite][1] the MicroPython/ESP32 *public
-facing* web framework.
+building webapps using [upagekite][1], the MicroPython/ESP32-friendly
+*public facing* web framework.
 
 The main difference between [upagekite][1] and other Python web
 frameworks are:
 
-   1. [upagekite][1] is small, simple and self containd - intended for
+   1. [upagekite][1] is small, simple and self contained - intended for
       modest hardware (like the ESP32) and low-traffic, simple web-apps.
    2. [upagekite][1] makes it very easy to expose your webapp to the
       public Internet so you can interact with it from anywhere. You can
@@ -23,16 +27,21 @@ public relays. Note this is a paid service, but the trial is free and
 there are zero-cost options available for people of limited means. If
 you prefer to DIY, the [relay itself][3] is also fully open source.
 
+It is possible to run a working, dynamic website using [upagekite][1]
+and MicroPython in only a few hundred kilobytes of RAM; the library was
+tested and developed using the ESP32 DevKitC, which only has 520kB of
+RAM!
+
 
 ## Prerequisites
 
-   1. Sign up for an account at <https://pagekite.net/>
+   1. Sign up for an account at <https://pagekite.net/signup/>
    2. Install **micropython** or **Python 3.8+**
 
 Optionally, if you are targetting the ESP32, install [a recent (1.14+)
 version of MicroPython](https://micropython.org/download/) on your device.
 
-For Micropython on Unix:
+For Micropython on Unix, you may also need:
 
    * micropython -m upip install uasyncio
 
@@ -55,8 +64,10 @@ For Micropython on Unix:
     cp private/secrets.json.sample private/secrets.json
     nano private/secrets.json
 
-    # 5. Load the template app to verify it works!
+    # 5a. Run the template app to verify it works!
     python3 -m app
+
+    # 5b. Or, run the template app using MicroPython!
     micropython -m app
 
     # 6. In another terminal, try to fetch `/robots.txt`
@@ -77,7 +88,19 @@ You are now ready to proceed to one of the available tutorials
 
 
 
+## Copyright and Credits
+
+This tutorial is (C) Copyright 2021, Bjarni R. Einarsson and [The
+Beanstalks Project ehf][3].
+
+The author has placed some included Python code samples in the Public
+Domain, thereby relinquishing all copyrights. Everyone is free to use,
+modify, republish, sell or give away the samples without prior consent
+from anybody. The samples this applies to, contain comments which make
+this clear on a file-by-file bases.
+
 
 [1]: https://github.com/pagekite/upagekite
 [2]: https://pagekite.net/
 [3]: https://github.com/pagekite/PyPagekite
+[3]: https://pagekite.net/company/

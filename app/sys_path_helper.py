@@ -1,5 +1,12 @@
-# This is a helper which configures sys.path and provides helpers which
-# mask some of the differences between MicroPython and CPython.
+##############################################################################
+# Note: The author has placed this work in the Public Domain, thereby        #
+#       relinquishing all copyrights.  Everyone is free to use, modify,      #
+# republish, sell or give away this work without prior consent from anybody. #
+##############################################################################
+#
+# This is a helper module which configures sys.path and provides utilities
+# which mask some of the differences between MicroPython and CPython.
+#
 import sys
 
 if sys.version_info < (3, 4, 0):

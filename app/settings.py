@@ -1,3 +1,9 @@
+##############################################################################
+# Note: The author has placed this work in the Public Domain, thereby        #
+#       relinquishing all copyrights.  Everyone is free to use, modify,      #
+# republish, sell or give away this work without prior consent from anybody. #
+##############################################################################
+#
 # This is a common place for app settings
 #
 from .sys_path_helper import app_root, path_join
@@ -17,7 +23,7 @@ class uPageKiteSettings(uPageKiteDefaults):
     # Enable basic logging (uncomment debug or trace for more)
     info = uPageKiteDefaults.log
     error = uPageKiteDefaults.log
-    #debug = uPageKiteDefaults.log
+    debug = uPageKiteDefaults.log
     #trace = uPageKiteDefaults.log
 
 
