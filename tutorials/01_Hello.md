@@ -40,9 +40,9 @@ use like so:
 
 Most apps will also have settings and their own internal logic which needs
 to be accessible at various points. To facilitate this, we create a default
-"request environment", named `req_env`:
+"request environment", named `shared_req_env`:
 
-    req_env = {'something': "Custom app data goes here"}
+    shared_req_env = {'something': "Custom app data goes here"}
 
 
 ## 2. Configure uPageKite
@@ -110,6 +110,10 @@ HTTP server and the PageKite tunnel:
     # Run until aborted by CTRL+C
     pk_control.run()
 
+**Hint:** The `uPageKite` controller takes a list of kites, in case you
+want to provide different services on different ports or using different
+names.
+
 
 ## 6. Putting it all together
 
@@ -133,7 +137,7 @@ something that looks a bit like this:
         error = uPageKiteDefaults.log
 
 
-    req_env = {'something': "Custom app data goes here"}
+    shared_req_env = {'something': "Custom app data goes here"}
 
     httpd = HTTPD(KITE_NAME, WEB_ROOT, shared_req_env, myPageKiteSettings)
 
@@ -142,7 +146,6 @@ something that looks a bit like this:
     pk_control = uPageKite([kite], uPK=myPageKiteSettings)
 
     pk_control.run()
-
 
 You should be able to copy/paste this into file named `hello.py`, edit
 to your liking and then run it using the Python 3 interpretor. That
