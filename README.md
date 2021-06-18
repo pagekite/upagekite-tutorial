@@ -36,7 +36,7 @@ RAM!
 ## Prerequisites
 
    1. Sign up for an account at <https://pagekite.net/signup/>
-   2. Install **micropython** or **Python 3.8+**
+   2. Install **micropython** or a recent **Python 3.x**
 
 Optionally, if you are targetting the ESP32, install [a recent (1.14+)
 version of MicroPython](https://micropython.org/download/) on your device.
