@@ -41,9 +41,9 @@ RAM!
 Optionally, if you are targetting the ESP32, install [a recent (1.14+)
 version of MicroPython](https://micropython.org/download/) on your device.
 
-For MicroPython on Unix, you may also need:
+For MicroPython (or Pycopy) on Unix, you may also need:
 
-   * micropython -m upip install uasyncio
+   * micropython -m upip install pycopy-uasyncio
 
 
 ## Getting Started
